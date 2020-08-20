@@ -23,9 +23,10 @@
                     echo '> Running the application tests ...'
                 }
             }
-            stage('Destroy') {
+            stage('Depploy') {
                 steps {
-                    echo '> Destroying the docker artifacts ...'
+                    echo '> Deploy Docker ...'
+                    bat 'docker-compose up'
                     
                 }
             }
