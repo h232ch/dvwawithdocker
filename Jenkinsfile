@@ -4,8 +4,7 @@
          checkout scm
      }
      stage('Build') {
-            steps {
-                sh 'make' 
-            }
+         echo '> Build Docker'
+         bat 'docker ps -a'
      }
  }
