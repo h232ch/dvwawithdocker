@@ -7,4 +7,11 @@
          echo '> Build Docker'
          bat 'docker ps -a'
      }
- }
+  
+     stage('Test') {
+         steps {
+            echo 'Testing..'
+         }
+     }
+  
+}
