@@ -5,7 +5,6 @@
      }
      stage('Build') {
           echo '> Building the docker containers ...'
-          docker-compose build
      }
   
  }
