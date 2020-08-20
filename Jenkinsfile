@@ -26,7 +26,7 @@
             stage('Depploy') {
                 steps {
                     echo '> Deploy Docker ...'
-                    bat 'docker-compose up'
+                    bat 'docker-compose up -d'
                     
                 }
             }
