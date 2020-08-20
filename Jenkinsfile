@@ -15,6 +15,7 @@
             stage('Build') {
                 steps {
                     echo '> Building the docker containers ...'
+                    bat 'docker-compose build'
                 }
             }
             stage('Test') {
@@ -25,6 +26,7 @@
             stage('Destroy') {
                 steps {
                     echo '> Destroying the docker artifacts ...'
+                    
                 }
             }
         }
