@@ -2,3 +2,4 @@
      stage('Clone repository') {
          checkout scm
      }
+ }
