@@ -1,17 +1,31 @@
- node {
-     stage('Clone repository') {
-         echo '> Checking out the Git version '
-         checkout scm
-     }
-     stage('Build') {
-         echo '> Build Docker'
-         bat 'docker ps -a'
-     }
-  
-     stage('Test') {
-         steps {
-            echo 'Testing..'
-         }
-     }
-  
-}
+    pipeline {
+        agent any
+     
+        options {
+            skipDefaultCheckout(true)
+        }
+     
+        stages {
+            stage('Git') {
+                steps {
+                    echo '> Checking out the Git version control ...'
+                    checkout scm
+                }
+            }
+            stage('Build') {
+                steps {
+                    echo '> Building the docker containers ...'
+                }
+            }
+            stage('Test') {
+                steps {
+                    echo '> Running the application tests ...'
+                }
+            }
+            stage('Destroy') {
+                steps {
+                    echo '> Destroying the docker artifacts ...'
+                }
+            }
+        }
+    }
