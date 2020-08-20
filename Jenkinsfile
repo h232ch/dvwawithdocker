@@ -4,8 +4,8 @@
          checkout scm
      }
      stage('Build') {
-          echo '> Building the docker containers ...'
-          sh 'make'
-     }
+            steps {
+                sh 'make' 
+            }
   
  }
