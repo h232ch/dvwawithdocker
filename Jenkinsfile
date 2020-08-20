@@ -5,7 +5,7 @@
      }
      stage('Build') {
           echo '> Building the docker containers ...'
-          sh "docker"
+          ls
      }
   
  }
