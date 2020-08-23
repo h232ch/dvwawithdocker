@@ -12,24 +12,35 @@
                     checkout scm
                 }
             }
-            stage('Build') {
+            
+            stage('Docker Build') {
                 steps {
                     echo '> Building the docker containers ...'
                     bat 'docker-compose build'
                 }
             }
-            stage('Test') {
-                steps {
-                    echo '> Running the application tests ...'
-                    bat 'C:\Users\dnwn7\Desktop\zap\zappython\testpy\zapPython\Auth.py'
-                }
-            }
-            stage('Depploy') {
+            
+            stage('Docker Depploy') {
                 steps {
                     echo '> Deploy Docker ...'
                     bat 'docker-compose up -d'
                     
                 }
             }
+            
+            stage('Functional Testing') {
+                steps {
+                    echo '> Running the application functional tests ...'
+                    bat 'C:\Users\dnwn7\Desktop\zap\zappython\testpy\zapPython\Auth.py'
+                }
+            }
+            
+            stage('Vulnerability Testing') {
+                steps {
+                    echo '> Running the application vulnerability tests ...'
+                    bat 'C:\Users\dnwn7\Desktop\zap\zappython\testpy\zapPython\Auth.py'
+                }
+            }
+            
         }
     }
