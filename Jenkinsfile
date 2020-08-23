@@ -21,6 +21,7 @@
             stage('Test') {
                 steps {
                     echo '> Running the application tests ...'
+                    bat 'C:\Users\dnwn7\Desktop\zap\zappython\testpy\zapPython\Auth.py'
                 }
             }
             stage('Depploy') {
