@@ -33,28 +33,6 @@
                     echo '> Running the application functional tests ...'
                 }
             }
-            
-            stage('Vulnerability Testing') {
-                steps {
-                    echo '> Running the application vulnerability tests ...'
-                    
-                    echo '> 1. Authentification Set ..'
-                    bat 'python C:/Users/dnwn7/Desktop/zap/zappython/testpy/zapPython/Auth.py'
-                    
-                    echo '> 2. Spider ..'
-                    bat 'python C:/Users/dnwn7/Desktop/zap/zappython/testpy/zapPython/Spider.py'
-                    
-                    echo '> 3. Active Scan ..'
-                    bat 'python C:/Users/dnwn7/Desktop/zap/zappython/testpy/zapPython/ActiveAttack.py'
-                    
-                    echo '> 4. Result ..'
-                    bat 'python C:/Users/dnwn7/Desktop/zap/zappython/testpy/zapPython/Result.py'
-                    bat 'python C:/Users/dnwn7/Desktop/zap/zappython/testpy/zapPython/ResultVuln.py'
-                    
-                    echo '> Completed!!'
-                    
-                }
-            }
-            
+
         }
     }
