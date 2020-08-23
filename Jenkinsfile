@@ -31,14 +31,13 @@
             stage('Functional Testing') {
                 steps {
                     echo '> Running the application functional tests ...'
-                    bat 'C:\Users\dnwn7\Desktop\zap\zappython\testpy\zapPython\Auth.py'
                 }
             }
             
             stage('Vulnerability Testing') {
                 steps {
                     echo '> Running the application vulnerability tests ...'
-                    bat 'C:\Users\dnwn7\Desktop\zap\zappython\testpy\zapPython\Auth.py'
+                    bat 'C:/Users/dnwn7/Desktop/zap/zappython/testpy/zapPython/Auth.py'
                 }
             }
             
