@@ -20,7 +20,7 @@
                 }
             }
             
-            stage('Docker Depploy') {
+            stage('Docker Deploy') {
                 steps {
                     echo '> Deploy Docker ...'
                     bat 'docker-compose up -d'
