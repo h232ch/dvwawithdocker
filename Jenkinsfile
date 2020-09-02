@@ -39,7 +39,7 @@
                     echo '> 2. Spider ..'
                     bat 'python C:/Users/dnwn7/Desktop/zap/zappython/testpy/zapPython/Spider.py'
                     
-                    echo '> 3. Active Scan ..'
+                    echo '> 3. Vulnerability Scan ..'
                     bat 'python C:/Users/dnwn7/Desktop/zap/zappython/testpy/zapPython/ActiveAttack.py'
                     
                     echo '> 4. Result ..'
