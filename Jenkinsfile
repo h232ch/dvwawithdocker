@@ -6,7 +6,7 @@
         }
      
         stages {
-            stage('Git') {
+            stage('Source Code Pull') {
                 steps {
                     echo '> Checking out the Git version control ...'
                     checkout scm
@@ -28,11 +28,6 @@
                 }
             }
             
-            stage('Functional Testing') {
-                steps {
-                    echo '> Running the application functional tests ...'
-                }
-            }
             
             stage('Vulnerability Testing') {
                 steps {
